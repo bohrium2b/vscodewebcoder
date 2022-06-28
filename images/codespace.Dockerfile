@@ -20,11 +20,11 @@ WORKDIR /workspaces/ubuntu/
 ENV WORKDIR=/workspaces/ubuntu/
 ENV REPOSITORYNAME=ubuntu
 COPY ./config.yaml /home/ubuntu/.config/code-server/config.yaml
-COPY /opt/cs50/extensions/ /home/ubuntu/.local/share/code-server/extensions/
-COPY ./opt/cs50/extensions/ /opt/extensions/
+# COPY /opt/cs50/extensions/ /home/ubuntu/.local/share/code-server/extensions/
+# COPY ./opt/cs50/extensions/ /opt/extensions/
 COPY ./settings.json /home/ubuntu/.local/share/code-server/User/settings.json
 RUN sudo chown -hR ubuntu /home/ubuntu
-RUN find /opt/cs50/extensions/ -iname '*.vsix' -maxdepth 1 -exec code-server --install-extension {} ';'
-RUN find /opt/extensions/ -iname '*.vsix' -maxdepth 1 -exec code-server --install-extension {} ';'
+# RUN find /opt/cs50/extensions/ -iname '*.vsix' -maxdepth 1 -exec code-server --install-extension {} ';'
+# RUN find /opt/extensions/ -iname '*.vsix' -maxdepth 1 -exec code-server --install-extension {} ';'
 ENTRYPOINT ["/usr/bin/entrypoint.sh", "--bind-addr", "0.0.0.0:1337", "."]
 EXPOSE 1337 8080 8081 8082 5900
