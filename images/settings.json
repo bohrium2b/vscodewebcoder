@@ -1,0 +1,45 @@
+{
+    "terminal.integrated.fontFamily": "monospace",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.**": true
+    },
+    "notebook.lineNumbers": "on",
+    "terminal.integrated.enableBell": true,
+    "workbench.colorCustomizations" : {
+        "terminal.foreground" : "#ffffff",
+        "terminal.background" : "#000000",
+        "terminal.selectionBackground": "#494949"
+    },
+    "workbench.colorTheme": "Visual Studio Light",
+    "editor.bracketPairColorization.enabled": true,
+    "git.autofetch": true,
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "C_Cpp.errorSquiggles": "Enabled",
+    "python.autoComplete.addBrackets": true,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "python.analysis.completeFunctionParens": true,
+    "editor.wordWrap": "on",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "liveshare.alwaysFollowHost": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "gitlens.hovers.currentLine.over": "line",
+    "editor.inlineSuggest.enabled": true,
+    "git.confirmSync": false,
+    "editor.guides.indentation": false,
+    "editor.fontFamily": "Cascadia Code PL, Consolas, 'Courier New', monospace",
+    "kite.showWelcomeNotificationOnStartup": false,
+    "githubPullRequests.createOnPublishBranch": "never",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "args": [
+                "-l"
+            ],
+            "path": "bash"
+        },
+        "JavaScript Debug Terminal": null
+    }
+}
