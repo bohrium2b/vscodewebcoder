@@ -26,5 +26,5 @@ COPY ./settings.json /home/ubuntu/.local/share/code-server/User/settings.json
 RUN sudo chown -hR ubuntu /home/ubuntu
 # RUN find /opt/cs50/extensions/ -iname '*.vsix' -maxdepth 1 -exec code-server --install-extension {} ';'
 # RUN find /opt/extensions/ -iname '*.vsix' -maxdepth 1 -exec code-server --install-extension {} ';'
-# ENTRYPOINT ["/usr/bin/entrypoint.sh", "--bind-addr", "0.0.0.0:1337", "."]
+ENTRYPOINT ["/usr/bin/entrypoint.sh", "--bind-addr", "0.0.0.0:13337", "/workspaces/ubuntu"]
 EXPOSE 13337 8080 8081 8082 5900 6081
