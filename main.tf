@@ -61,13 +61,13 @@ data "coder_workspace" "me" {
 }
 
 # Desktop
-resource "coder_app" "novnc" {
-  agent_id      = coder_agent.dev.id
-  name          = "noVNC Desktop"
-  icon          = "https://ppswi.us/noVNC/app/images/icons/novnc-192x192.png"
-  url           = "http://localhost:6081"
-  relative_path = true
-}
+#resource "coder_app" "novnc" {
+#  agent_id      = coder_agent.dev.id
+#  name          = "noVNC Desktop"
+##  icon          = "https://ppswi.us/noVNC/app/images/icons/novnc-192x192.png"
+#  url           = "http://localhost:6081"
+#  relative_path = true
+#}
 
 # code-server
 resource "coder_app" "code-server" {
@@ -85,13 +85,13 @@ resource "coder_agent" "dev" {
 #!/bin/bash
 set -euo pipefail
 # start code-server
-code-server --auth none --port 13337 &
+code-server --auth none --port 13337 /workspaces/ubuntu/ &
 # start VNC
-echo "Creating desktop..."
-mkdir -p "$XFCE_DEST_DIR"
-cp -rT "$XFCE_BASE_DIR" "$XFCE_DEST_DIR"
+#echo "Creating desktop..."
+#mkdir -p "$XFCE_DEST_DIR"
+#cp -rT "$XFCE_BASE_DIR" "$XFCE_DEST_DIR"
 # Skip default shell config prompt.
-cp /etc/zsh/newuser.zshrc.recommended $HOME/.zshrc
+# cp /etc/zsh/newuser.zshrc.recommended $HOME/.zshrc
 echo "Initializing Supervisor..."
 nohup supervisord
   EOT
